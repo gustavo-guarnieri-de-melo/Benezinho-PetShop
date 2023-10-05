@@ -13,6 +13,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "TB_ANIMAL")
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "TP_ANIMAL")
 public abstract class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_ANIMAL")

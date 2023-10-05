@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "TB_SERVICO")
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "TP_SERVICO")
 public abstract class Servico {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_SERVICO")

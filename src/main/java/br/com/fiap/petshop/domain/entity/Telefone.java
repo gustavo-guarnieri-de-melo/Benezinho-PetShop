@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "TB_TELEFONE")
+@DiscriminatorValue("TELEFONE")
 public class Telefone {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_TELEFONE")

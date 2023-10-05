@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "TB_DOCUMENTO")
+@DiscriminatorValue("DOCUMENTO")
 public class Documento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_DOCUMENTO")

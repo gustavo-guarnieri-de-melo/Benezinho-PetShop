@@ -3,6 +3,7 @@ package br.com.fiap.petshop.domain.entity.animal;
 import br.com.fiap.petshop.domain.entity.Sexo;
 import br.com.fiap.petshop.domain.entity.servico.Servico;
 import br.com.fiap.petshop.infra.security.entity.Pessoa;
+import jakarta.persistence.DiscriminatorValue;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 import java.util.Set;
 @Entity
 @Table(name = "TB_GATO")
+@DiscriminatorValue( "GATO" )
 public class Gato extends Animal{
     public Gato() {
     }
